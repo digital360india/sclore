@@ -39,6 +39,8 @@ const MobileAnimation = () => {
 
   ];
 
+
+  
   return (
     <div className="md:hidden bg-white m-6">
       <h2 className="text-2xl text-[#323232] font-bold pb-6 text-center">
