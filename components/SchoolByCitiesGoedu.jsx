@@ -1,5 +1,5 @@
 import React from "react";
-import schoolbycities from "@/public/schoolbycities.svg";
+import schoolbycities2 from "@/public/schoolbycities2.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -39,7 +39,7 @@ const SchoolByCitiesGoedu = () => {
       <div>
         <div
           className="w-full h-auto  bg-no-repeat bg-cover bg-center"
-          style={{ backgroundImage: `url(${schoolbycities.src})` }}
+          style={{ backgroundImage: `url(${schoolbycities2.src})` }}
         >
           <div className="p-12">
             <h1 className="text-center text-[1rem] text-[#323232]">

@@ -92,7 +92,7 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        className="hidden md:block w-full absolute top-0 z-40 bg-background-light"
+        className="hidden md:block w-full absolute top-0 z-40 bg-white"
         
       >
         <div className="justify-between  items-center h-[80px] flex px-10">
@@ -100,7 +100,7 @@ const Navbar = () => {
             <Link href={"/"}>
               <img
                 className="w-14 lg:w-[80px]"
-                src="/goEdulogo.svg"
+                src="/sclorelogo.png"
                 alt="Logo"
                 width={88}
                 height={56}
@@ -116,9 +116,9 @@ const Navbar = () => {
                 return (
                   <li
                     key={link.name}
-                    className={`text-[#FFFFFF] text-[1rem] py-2 px-2 ${
+                    className={`text-background-button text-[1rem] py-2 px-2 ${
                       activeButton === link.name.toLowerCase()
-                        ? "text-[#FFFFFF] font-semibold rounded-lg"
+                        ? "text-background-button font-semibold rounded-lg"
                         : ""
                     } ${hideOnMd ? "hidden lg:block" : ""}`}
                   >
@@ -151,7 +151,7 @@ const Navbar = () => {
             <Link href={"/"}>
               <img
                 className="w-14 h-14 lg:w-22"
-                src="/footerlogo.svg"
+                src="/sclorelogo.png"
                 alt="Logo"
                 width={1000}
                 height={1000}
@@ -222,7 +222,7 @@ const Navbar = () => {
             <Link href={"/"}>
               <img
                 className="w-[70px] h-[60px]"
-                src="/footerlogo.svg"
+                src="/sclorelogo.png"
                 alt="Logo"
               />
             </Link>

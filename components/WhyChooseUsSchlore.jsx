@@ -47,11 +47,11 @@ const WhyChooseUsSchlore = () => {
 
           <div className="">
             <Image
-              src="/whychooseus.svg"
+              src="/whychoose.svg"
               width={1000}
               height={1000}
               alt="img"
-              className="w-[440px] h-[550px]"
+              className="w-[420px] h-[550px]"
             />
           </div>
 

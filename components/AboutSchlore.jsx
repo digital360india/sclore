@@ -86,25 +86,14 @@ const AboutSchlore = () => {
           }`}
         >
           <button
-            className="absolute w-[30px] h-[30px] rounded-full text-white text-[1.3rem] bg-[#1B6EA1] top-48 left-3"
+            className="absolute w-[30px] h-[30px] rounded-full text-white text-[1.3rem] bg-background-button top-48 left-3"
             onClick={() => setShowContent(false)}
           >
             &lt;
           </button>
 
           <div className="p-[46px] text-justify overflow-y-auto h-full text-[13px]">
-            Go Edu is India&apos;s trusted platform for discovering the best boarding
-            schools, dedicated to offering unbiased, detailed information to
-            help families make well-informed choices. We simplify school
-            selection, bringing clarity and confidence to parents and students
-            alike.
-            <br />
-            <br />
-            Driven by a commitment to educational transparency, Go Edu combines
-            insightful listings, genuine reviews, and comprehensive school
-            profiles. Our mission is to empower families with accurate,
-            accessible resources and guide them toward the ideal academic
-            environment tailored to their needs.
+          Sclore is your trusted guide to discovering the top boarding schools across India. Our easy-to-use platform provides detailed information and accurate insights into the best institutions, making your search effortless and efficient. Whether you&apos;re looking for outstanding academics, modern facilities, or a nurturing atmosphere, Sclore ensures you have everything you need to make informed choices for your child&apos;s education. Let us help you find the perfect boarding school to build a bright and successful future.
           </div>
         </div>
       </div>
@@ -205,15 +194,15 @@ const AboutSchlore = () => {
                   className="absolute w-[500px] h-[330px]  right-80 bottom-5 z-10"
                   alt="Line"
                 />
-                {/* <Image
-                  src="/"
+                <Image
+                  src="/sclore2.png"
                   width={1000}
                   height={1000}
                   className={`absolute w-[450px] h-[485px] -bottom-[70px]  right-0 transition-transform duration-700 ease-in-out transform ${
                     isHovered ? "translate-x-0" : "translate-x-full"
                   }`}
                   alt="Frame"
-                /> */}
+                />
               </div>
             </div>
           </div>
@@ -228,7 +217,7 @@ const AboutSchlore = () => {
               onMouseLeave={() => setShowContent(false)}
             >
               <button
-                className="absolute w-[40px] h-[40px] rounded-full text-white text-[1.5rem] bg-[#1B6EA1] top-36 left-10  hover:text-gray-800"
+                className="absolute w-[40px] h-[40px] rounded-full text-white text-[1.5rem] bg-background-button top-36 left-10  hover:text-gray-800"
                 onClick={() => setShowContent(false)}
               >
                 &lt;
@@ -236,17 +225,7 @@ const AboutSchlore = () => {
               <div
                 className={`h-full px-[100px] overflow-y-auto  text-[1rem]  `}
               >
-                Go Edu is India&apos;s trusted platform for discovering the best
-                boarding schools, dedicated to offering unbiased, detailed
-                information to help families make well-informed choices. We
-                simplify school selection, bringing clarity and confidence to
-                parents and students alike. <br />
-                <br />
-                Driven by a commitment to educational transparency, Go Edu
-                combines insightful listings, genuine reviews, and comprehensive
-                school profiles. Our mission is to empower families with
-                accurate, accessible resources and guide them toward the ideal
-                academic environment tailored to their needs.
+                Sclore is your trusted guide to discovering the top boarding schools across India. Our easy-to-use platform provides detailed information and accurate insights into the best institutions, making your search effortless and efficient. Whether you&apos;re looking for outstanding academics, modern facilities, or a nurturing atmosphere, Sclore ensures you have everything you need to make informed choices for your child&apos;s education. Let us help you find the perfect boarding school to build a bright and successful future.
                 <div className="flex justify-center items-center text-[#323232] space-x-60 pt-10">
                   <div className="space-y-1">
                     <Image

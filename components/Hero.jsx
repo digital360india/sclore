@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
@@ -15,6 +15,8 @@ export default function Hero({ image, height, need }) {
   const [selectedSchoolLocation, setSelectedSchoolLocation] =
     useState("Location"); // Default label
 
+    const dropdownRef = useRef(null); 
+    const locationDropdownRef = useRef(null);
   const handleSchoolType = () => {
     setIsOpen(!isOpen);
   };
@@ -44,7 +46,21 @@ export default function Hero({ image, height, need }) {
   };
 
   const currentPath = usePathname();
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+      if (locationDropdownRef.current && !locationDropdownRef.current.contains(event.target)) {
+        setIsOpenLocation(false);
+      }
+    };
 
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
     <>
       <div className="bg-white text-black">
@@ -104,7 +120,7 @@ export default function Hero({ image, height, need }) {
               </div>
 
               {isOpen && (
-                <div className="absolute top-[16%] lg:top-[20%] left-[2%] md:left-[10%] lg:left-[40%] bg-white shadow-md w-[400px] h-fit rounded-md z-10 ">
+                <div ref={dropdownRef} className="absolute top-[16%] lg:top-[20%] left-[2%] md:left-[10%] lg:left-[40%] bg-white shadow-md w-[400px] h-fit rounded-md z-10 ">
                   <div className="bg-background-light h-full rounded-md py-4 px-2">
                     <ul className="p-2 text-[20px]">
                       <div className="flex justify-between items-center  p-4">
@@ -118,11 +134,14 @@ export default function Hero({ image, height, need }) {
                       </div>
 
                       {[
-                        "Boarding",
-                        "Boys Boarding",
-                        "Full Boarding",
-                        "Girls Boarding",
-                        "Day Boarding",
+                         "Boarding",
+                         "Boys Boarding",
+                         "Full Boarding",
+                         "Girls Boarding",
+                         "Day Boarding",
+                         "Coed Boarding",
+                         "ICSE Boarding",
+                         "CBSE Boarding",
                       ].map((schoolType, index) => (
                         <div key={index}>
                           <li
@@ -137,7 +156,7 @@ export default function Hero({ image, height, need }) {
                             />
                             <span>{`${schoolType} School`}</span>
                           </li>
-                          {index < 4 && (
+                          {index < 7 && (
                             <hr className="h-[2px] bg-background-button border-0 w-[350px] m-2" />
                           )}
                         </div>
@@ -148,7 +167,7 @@ export default function Hero({ image, height, need }) {
               )}
 
               {isOpenLocation && (
-                <div className="absolute top-[16%] lg:top-[20%] left-[2%] md:left-[10%] lg:left-[40%] bg-white shadow-md w-[400px] h-[550px] overflow-y-scroll rounded-md z-10 scroll-hidden ">
+                <div ref={locationDropdownRef} className="absolute top-[16%] lg:top-[20%] left-[2%] md:left-[10%] lg:left-[40%] bg-white shadow-md w-[400px] h-[550px] overflow-y-scroll rounded-md z-10 scroll-hidden ">
                   <div className="bg-background-light rounded-md py-4 px-2">
                     <ul className="p-2 text-[20px]">
                       <div className="flex justify-between items-center  p-4">
@@ -166,21 +185,13 @@ export default function Hero({ image, height, need }) {
                         "shimla",
                         "bangalore",
                         "india",
-                        "chandigarh",
-                        "mumbai",
-                        "faridabad",
+
                         "nainital",
-                        "varanasi",
-                        "kolkata",
-                        "udaipur",
-                        "jaipur",
+
                         "panchgani",
-                        "sikar",
+
                         "hyderabad",
                         "pune",
-                        "delhi",
-                        "darjeeling",
-                        "ajmer",
                       ].map((schoolLocation, index, array) => {
                         return (
                           <div key={index}>

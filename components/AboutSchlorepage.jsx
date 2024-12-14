@@ -26,13 +26,16 @@ const AboutUsSchool123 = () => {
               className="w-[350px] h-[250px] absolute bottom-40 left-20 hidden md:block"
             /> */}
         <div className="flex justify-center items-center mb-20">
+          <div className="rounded-full bg-white  p-10">
+
           <Image
-            src="/aboutbg.svg"
+            src="/sclorelogo.png"
             alt="about"
             width={1000}
             height={1000}
             className="w-[120px] h-[120px] md:w-[200px] md:h-[200px] "
-          />
+            />
+            </div>
         </div>
 
         <h2 className="text-center text-white text-[30px] mb-5">
@@ -76,7 +79,7 @@ const AboutUsSchool123 = () => {
                 About Sclore
               </p>
               <img
-                src="/footerlogo.svg"
+                src="/sclorelogo.png"
                 className="w-[100px] h-[130px] md:h-[160px] md:w-[150px]"
                 alt="Mission logo"
               />

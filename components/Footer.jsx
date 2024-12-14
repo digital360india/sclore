@@ -14,7 +14,7 @@ export const Footer = () => {
                 width={1000}
                 height={1000}
                 alt="logo"
-                src="/footerlogo.svg"
+                 src="/sclorelogo.png"
                 className="w-[60px] h-[60px]"
               />
 
