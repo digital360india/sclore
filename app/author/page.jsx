@@ -5,7 +5,7 @@ export async function generateMetadata() {
   return {
     title: "Author",
     description:
-      "Welcome to GoEdu - The ultimate guide to the best schools in the United Arab Emirates! ",
+      "Welcome to Sclore - The ultimate guide to the best schools in the United Arab Emirates! ",
   };
 }
 
@@ -26,6 +26,13 @@ export default function page() {
                 alt="AirMax Pro"
                 className="z-0 h-full w-full rounded-lg object-cover"
               />
+               <div className=" text-[16px] mt-6">
+                <p className=" text-[20px] font-bold">Know More</p>
+
+                <a target="_blank" href="https://www.negivaibhav.com/">
+                  <p className="text-blue-500 underline">negivaibhav.com</p>
+                </a>
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
               <div className="absolute bottom-4 left-4 text-left">
                 <h1 className="text-lg font-semibold  text-white">
@@ -40,46 +47,18 @@ export default function page() {
                 <p className="text-black">Educational Content Specialist</p>
               </div>
               <p>
-                Hi, I&apos;m Vaibhav Negi! With a deep passion for education and a
-                knack for crafting meaningful content, I have spent over three
-                years in digital marketing, focusing primarily on the
-                educational sector. Writing has always been my way of connecting
-                with people, and throughout my career, I've been fortunate to
-                create impactful content that helps students, parents, and
-                educators alike.
+              Hello! I&apos;m Vaibhav Negi, an educational content specialist with over three years of experience in simplifying school selection and admission processes. My focus is on creating content that&apos;s not just informative but also empowering for students and families.
               </p>
               <p>
-                My journey in content creation began in digital marketing, where
-                I quickly found my true calling within the education niche.
-                Since then, I&apos;ve collaborated with several educational
-                platforms, offering content that guides students and families,
-                explores emerging trends, and supports educators in their
-                mission. My goal is to create content that informs and inspires
-                curiosity and confidence.
+              At Sclore, I specialize in crafting student-focused resources that provide clarity in decision-making. From exploring top schools to decoding admission timelines, my goal is to ensure every family feels confident about their educational choices.
               </p>
               <p>
-                At Go Edu, I specialize in creating insightful, trustworthy, and
-                contextually relevant content for the Indian education
-                landscape. My writing is tailored to empower parents and
-                students in selecting the best boarding schools by providing
-                in-depth details on each institution&apos;s culture, curriculum, and
-                offerings. I&apos;m committed to ensuring each article, guide, and
-                review is as enlightening as it is engaging, capturing the
-                unique aspects of India&apos;s diverse educational framework.
+              My journey in digital content creation extends beyond education. Through my work in lifestyle and community engagement, I&apos;ve learned to connect with diverse audiences, delivering content that&apos;s both engaging and practical.
               </p>
               <p>
-                Beyond education, I&apos;ve expanded my experience as a freelance
-                writer with Sportskeeda, diving into the sports domain and
-                refining my versatility in adapting to different audiences. This
-                diversity in experience has sharpened my ability to resonate
-                with readers, no matter the topic while maintaining quality and
-                authenticity in each piece.
+              At Sclore, I aim to bring a humanized touch to educational guidance, making it accessible and impactful for everyone. Let&apos;s explore the path to brighter futures, together.
               </p>
-              <p>
-                At Go Edu, my mission is to simplify and enrich the school
-                selection process by delivering content that helps students and
-                their families make informed decisions.
-              </p>
+            
             </div>
           </div>
         </div>
