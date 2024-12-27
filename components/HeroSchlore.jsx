@@ -6,13 +6,13 @@ const HeroSchlore = () => {
   return (
     <>
     
-    <div className="md:mt-20 mt-10   w-full h-[100vh] hidden md:block">
+    <div className="mt-20    w-full h-full hidden md:block">
       <Image
-        src="/bgsclore.svg"
+        src="/11.png"
         alt="School choice"
         width={1000}
         height={1000}
-        className="w-full h-[100vh] object-none  md:object-cover"
+        className="w-full h-full "
         />
 
       

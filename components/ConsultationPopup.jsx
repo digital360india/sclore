@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/image"; // Import Image from Next.js
+import Image from "next/image";
 import { RxCross1 } from "react-icons/rx";
 import axios from "axios";
 
@@ -63,7 +63,7 @@ export default function ConsultationPopup({ setClose }) {
 
         <div className="w-[80vw] h-[539px] hidden md:block z-0 ">
           <Image
-            src="/popup.svg"
+            src="/bookingformsclore.svg"
             alt="School choice"
             width={1000}
             height={1000}

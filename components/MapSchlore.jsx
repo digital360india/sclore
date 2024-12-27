@@ -65,6 +65,7 @@ const MapSchlore = () => {
           <div className="flex justify-center items-center gap-10">
             {cities.map((city, index) => (
               <div key={index} className=" text-center">
+                <Link href={`/category/boarding-schools-in-${city.name}`}>
                 <div className={`bounce-slow ${index} custom-shadow`}>
                   <Image
                     src={city.bannerSrc}
@@ -83,7 +84,6 @@ const MapSchlore = () => {
                     className="w-full h-[12px]"
                   />
                 </div>
-                <Link href={`/category/boarding-schools-in-${city.name}`}>
                   {/* <p className="mt-4">{city.name}</p> */}
                   <p className="mt-4">{city.name.charAt(0).toUpperCase() + city.name.slice(1)}</p>
 
