@@ -101,7 +101,7 @@ export default function Home() {
       <FormSchlore />
       <MapSchlore />
       <WhyChooseUsSchlore />
-      <div className="md:hidden">
+      <div className="xl:hidden">
         <MobileAnimation />
       </div>
       <AboutSchlore />
