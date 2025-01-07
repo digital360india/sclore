@@ -38,12 +38,12 @@ const Navbar = () => {
  
   const socialLinks = [
     {
-      href: "https://www.facebook.com/profile.php?id=100092405190812",
+      href: "https://www.facebook.com/profile.php?id=61571456066720&mibextid=ZbWKwL",
       icon: <BsFacebook />,
       key: "facebook",
     },
     {
-      href: "https://www.instagram.com/edu123india/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==",
+      href: "https://www.instagram.com/scloreindia?igsh=MXEwdGtsMG5mNTgzbQ==",
       icon: <BsInstagram />,
       key: "instagram",
     },
