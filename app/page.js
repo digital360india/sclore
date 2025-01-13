@@ -74,7 +74,7 @@ export async function generateMetadata() {
         alternateName: "Sclore",
         areaServed: "India",
         availableLanguage: "English",
-        email: "info@GoEdu.in",
+        email: "info@sclore.com",
         telephone: "9557695360",
         url: "https://www.GoEdu.in/",
       },

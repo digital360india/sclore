@@ -15,8 +15,8 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 import { StarRating, StarRatingper } from "./StarRating";
 import { PiStudentFill } from "react-icons/pi";
 import Enquire from "./Enquire";
-import CategoryGalleryGoEdu from "./CategoryGalleryGoEdu";
 import ConsultationPopup from "./ConsultationPopup";
+import CategoryGallerySclore from "./CategoryGallerySclore";
 
 const SchoolCardMini = ({ data, index, citySlug }) => {
   useEffect(() => {
@@ -80,7 +80,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                 />
               </div> */}
 
-                <CategoryGalleryGoEdu
+                <CategoryGallerySclore
                   data={data}
                   index={index}
                   citySlug={citySlug}
@@ -238,7 +238,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
         <div className="w-[85vw] md:w-[80vw]  md:h-[90vh] shadow-counsel px-[25px] py-[43px] space-y-2">
           <img
             className="w-full h-[167px] md:h-[300px] object-cover"
-            src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1729853967/Go%20Edu/${citySlug}/G-${data?.fields?.Image_Code}.png`}
+            src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1736487580/Sclore/${citySlug}/G-${data?.fields?.Image_Code}.png`}
             alt="img"
           />
 

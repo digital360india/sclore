@@ -10,7 +10,7 @@ export async function generateMetadata() {
   return {
     title: "Contact Us",
     description:
-      "Welcome to GoEdu - The ultimate guide to the best schools in the United Arab Emirates! ",
+      "Welcome to Sclore - The ultimate guide to the best schools in the United Arab Emirates! ",
   };
 }
 
@@ -47,7 +47,7 @@ const Contact = () => {
                 </li>
                 <li className="flex items-center gap-3">
                   <SlEnvolope className="h-8 w-5 " />
-                  <div>info@goedu.in</div>
+                  <div>info@sclore.com</div>
                 </li>
                
 

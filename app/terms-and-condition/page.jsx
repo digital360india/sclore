@@ -86,7 +86,7 @@ const TermsAndCondition = () => {
             </p>
             If you have questions, feedback, or need further assistance,
             we&apos;re here for you! Please reach out to us at: <br />
-            <p>Email: info@goedu.in</p>
+            <p>Email: info@sclore.com</p>
             <p>
               Contact Number: 01353530324, 9557695360
               <p className="pt-4">
