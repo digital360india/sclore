@@ -28,7 +28,7 @@ export async function generateMetadata() {
       type: "website",
       title: "Find the Best Boarding Schools in Seconds | Sclore",
       description: "Find your dream boarding school in seconds with Sclore. Unlock a world of educational possibilities. Your path to the perfect education begins here.",
-      url: "https://www.GoEdu.in/",
+      url: "https://www.sclore.com/",
       siteName: "Sclore",
       images: [
         {
