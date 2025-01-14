@@ -62,7 +62,7 @@ export const Footer = () => {
                     className="w-[20px] h-[20px]"
                   />
                   <p>
-                    <a href="mailto:info@sclore.com">info@sclore.com</a>
+                    <a href="mailto:scloreindia@gmail.com">scloreindia@gmail.com</a>
                   </p>
                 </div>
               </div>

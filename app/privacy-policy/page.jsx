@@ -70,7 +70,7 @@ export default function page() {
             We&apos;re here for any privacy-related inquiries or feedback. You
             can contact us directly via email or phone for assistance: :
             <br />
-            <p>Email: info@sclore.com</p>
+            <p>Email: scloreindia@gmail.com</p>
             <p>Contact Number:01353530324, 9557695360</p>
             <p>Thank you for trusting Sclore. We&apos;re here to support your educational journey with care and transparency.</p>
           </p>
