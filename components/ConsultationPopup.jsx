@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { RxCross1 } from "react-icons/rx";
 import axios from "axios";
+import { base } from "@/app/api/airtable";
+import { toast } from "react-toastify";
 
 export default function ConsultationPopup({ setClose }) {
   const [loading, setLoading] = useState(false);
@@ -11,7 +13,7 @@ export default function ConsultationPopup({ setClose }) {
     email: "",
     phone: "",
     classes: "",
-    source: "Schlore - www.schlore.com",
+    source: "Schlore - www.sclore.com",
   });
 
   const handleChange = (e) => {
@@ -24,31 +26,60 @@ export default function ConsultationPopup({ setClose }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Show loader and disable button
-    console.log(formData);
+    setLoading(true);
+
+    const airtablePayload = [
+      {
+        fields: {
+          Name: formData.name,
+          email: formData.email,
+          Mobile: formData.phone,
+          grade: formData.classes,
+          Url: window.location.href,
+        },
+      },
+    ];
     try {
-      const response = await axios.post(
+      await base("counsellorForm").create(
+        airtablePayload,
+        function (err, records) {
+          if (err) {
+            console.error("Airtable Error:", err);
+            alert("Airtable submission failed. Please try again.");
+            return;
+          }
+
+          records.forEach(() => {
+            console.log("Airtable submission successful!");
+          });
+        }
+      );
+
+      const emailResponse = await axios.post(
         "https://goedunodemailer.onrender.com/send-email",
         formData
       );
-      if (response.status === 200) {
-        alert("Form submitted successfully.");
+
+      if (emailResponse.status === 200) {
+        toast.success("Form Submitted Successfully!");
         setFormData({
           name: "",
           email: "",
           phone: "",
           classes: "",
-          source: "Schlore - www.schlore.com",
+          source: "Sclore - www.sclore.com",
         });
       } else {
-        alert("Try again");
+        alert("Email submission failed. Please try again.");
       }
     } catch (error) {
+      console.error("Error occurred:", error);
       alert("An error occurred. Please try again.");
     } finally {
-      setLoading(false); // Re-enable button
+      setLoading(false);
     }
   };
+
   return (
     <div className="fixed inset-0 z-[9999] bg-black bg-opacity-50 flex justify-center items-center">
       <div className="relative md:flex   gap-5  md:items-center bg-white rounded-lg shadow-lg w-full max-w-[90vw] md:max-w-[80vw] ">

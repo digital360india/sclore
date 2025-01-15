@@ -14,7 +14,7 @@ import { RiGraduationCapFill } from "react-icons/ri";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { StarRating, StarRatingper } from "./StarRating";
 import { PiStudentFill } from "react-icons/pi";
-import Enquire from "./Enquire";
+
 import CategoryGalleryGoEdu from "./CategoryGalleryGoEdu";
 import ConsultationPopup from "./ConsultationPopup";
 
@@ -45,20 +45,16 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
     setViewers(randomViewers);
   }, []);
 
+  //  popup
+  const [isOpenpopup, setIsOpenpopup] = useState(false);
 
+  const toggleBookingPopup = () => {
+    setIsOpenpopup(true);
+  };
 
-    //  popup
-    const [isOpenpopup, setIsOpenpopup] = useState(false);
-  
-    const toggleBookingPopup = () => {
-      setIsOpenpopup(true);
-    };
-  
- 
-  
-    const toggleBookingClosePopup = () => {
-      setIsOpenpopup(false);
-    };
+  const toggleBookingClosePopup = () => {
+    setIsOpenpopup(false);
+  };
 
   return (
     <>
@@ -72,36 +68,12 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
           <div className="flex  gap-5">
             <div className="">
               <div className=" ">
-                {/* <div>
-                <img
-                  className="w-[300px] h-[210px] object-cover"
-                  src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/G-${data?.fields?.Image_Code}.png`}
-                  alt="img"
-                />
-              </div> */}
-
                 <CategoryGalleryGoEdu
                   data={data}
                   index={index}
                   citySlug={citySlug}
                 />
-                {/* <div className="flex justify-between">
-                <img
-                  className="w-[90px] h-[60px] object-cover"
-                  src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/G-${data?.fields?.Image_Code}.png`}
-                  alt="img"
-                />
-                <img
-                  className="w-[90px] h-[60px] object-cover"
-                  src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/H-${data?.fields?.Image_Code}.png`}
-                  alt="img"
-                />
-                <img
-                  className="w-[90px] h-[60px] object-cover"
-                  src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1722065379/Edu123/${citySlug}/I-${data?.fields?.Image_Code}.png`}
-                  alt="img"
-                />
-              </div> */}
+               
               </div>
             </div>
 
@@ -252,10 +224,10 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
             </div>
             <div className="flex text-[12px] items-center text-[#898989] gap-2">
               <div>
-              <IoLocationSharp className="text-[20px]" />
+                <IoLocationSharp className="text-[20px]" />
               </div>
               <div className="w-[90%]">
-              <p className=""> {data?.fields?.fullAddress}</p>
+                <p className=""> {data?.fields?.fullAddress}</p>
               </div>
             </div>
             <StarRating
@@ -270,14 +242,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
               </p>
             </div>
 
-            {/* <div className="w-full bg-[#1B6EA1] rounded-l-2xl flex justify-center items-center float-right">
-                <div className="flex justify-between text-[10px] text-[#FFFFFF] w-[90%]">
-                  <div className="flex flex-col items-center space-y-1">
-                    <p className="">Curriculum</p>
-
-            </div>
-            </div>
-            </div> */}
+            
             <div className="flex  space-x-12 p-3 font-semibold  text-[10px] bg-background-button rounded-l-2xl text-white   w-[315px]">
               <div className="space-y-3">
                 <div className="flex flex-col ">
@@ -308,8 +273,6 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
                       : null}
                   </p>
                 </div>
-
-                
               </div>
               <div className="space-y-3">
                 <div className="flex flex-col ">
@@ -379,15 +342,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
         </div>
       </div>
 
-      {isOpenpopup && (
-              <ConsultationPopup setClose={toggleBookingClosePopup} />
-            )}
-
-      <Enquire
-         isOpen={isPopupOpen}
-         onClose={closePopup}
-         school={school?.name}
-      />
+      {isOpenpopup && <ConsultationPopup setClose={toggleBookingClosePopup} />}
     </>
   );
 };
