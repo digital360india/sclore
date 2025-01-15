@@ -15,7 +15,7 @@ export default function ConsultationPopup({ setClose }) {
     email: "",
     phone: "",
     classes: "",
-    source: "Schlore - www.sclore.com",
+    source: "Sclore - www.sclore.com",
   });
 
   const handleChange = (e) => {
@@ -131,7 +131,7 @@ export default function ConsultationPopup({ setClose }) {
               <PhoneInput
                 country={"in"}
                 value={formData.phone}
-                onChange={handlePhoneChange}
+                onChange={handleChange}
                 inputStyle={{
                   width: "100%",
                   height: "40px",
