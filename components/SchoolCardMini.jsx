@@ -17,6 +17,7 @@ import { PiStudentFill } from "react-icons/pi";
 
 import CategoryGalleryGoEdu from "./CategoryGalleryGoEdu";
 import ConsultationPopup from "./ConsultationPopup";
+import CategoryGallerySclore from "./CategoryGallerySclore";
 
 const SchoolCardMini = ({ data, index, citySlug }) => {
   useEffect(() => {
@@ -59,10 +60,6 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
   return (
     <>
       <div className="hidden lg:block">
-        {/* <div className="float-right py-3 px-5 h-[36px] bg-[#F97B24] rounded-l-3xl flex items-center gap-2 shadow-counsel">
-          <IoPersonOutline className="text-white" size={16} />
-          <p className="text-[12px] text-[#FFFFFF]">{viewers}+ people viewed</p>
-        </div> */}
 
         <div className="lg:w-[810px] h-[500px] py-[25px] shadow-custom">
           <div className="flex  gap-5">
@@ -210,7 +207,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
         <div className="w-[85vw] md:w-[80vw]  md:h-[90vh] shadow-counsel px-[25px] py-[43px] space-y-2">
           <img
             className="w-full h-[167px] md:h-[300px] object-cover"
-            src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1729853967/Go%20Edu/${citySlug}/G-${data?.fields?.Image_Code}.png`}
+            src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1736487580/Sclore/${citySlug}/G-${data?.fields?.Image_Code}.png`}
             alt="img"
           />
 

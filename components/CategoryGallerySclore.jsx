@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-const CategoryGalleryGoEdu = ({ data, index, citySlug }) => {
+const CategoryGallerySclore = ({ data, index, citySlug }) => {
   const [expandedCard, setExpandedCard] = useState('c1');
 
   const handleCardClick = (id) => {
@@ -24,7 +24,7 @@ const CategoryGalleryGoEdu = ({ data, index, citySlug }) => {
               width={1000}
               height={1000}
               className="object-cover w-full h-full"
-              src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1729853967/Go%20Edu/${citySlug}/${
+              src={`https://res.cloudinary.com/eduminatti-com/image/upload/v1736487580/Sclore/${citySlug}/${
                 ['G', 'I', 'H', 'G'][idx]
               }-${data?.fields?.Image_Code}.png`}
               alt={`Category ${cardId}`}
@@ -36,7 +36,7 @@ const CategoryGalleryGoEdu = ({ data, index, citySlug }) => {
   );
 };
 
-export default CategoryGalleryGoEdu;
+export default CategoryGallerySclore;
 
 {/* CSS styles */}
 <style jsx>{`
