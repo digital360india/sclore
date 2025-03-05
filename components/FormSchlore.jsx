@@ -61,10 +61,10 @@ const FormSchlore = () => {
         </div>
 
         <div className="md:w-1/2 w-full p-6 bg-white">
-          <div className="md:hidden block w-[226px] text-[20px]">
-            Confuse to choose the Best School ?
+        <div className="md:hidden block font-bold text-center text-[20px]">
+        Confuse to choose the Best School ?
           </div>
-          <h3 className="md:text-xl mt-8 text-[12px] mb-6 text-[#323232]">
+          <h3 className="md:text-xl  text-[12px] my-6 text-[#323232]">
             Fill this form and get in touch with our counsellor
           </h3>
           <form onSubmit={handleSubmit} className="space-y-7">
@@ -175,16 +175,10 @@ const FormSchlore = () => {
             </select>
           </div> */}
             <div className="md:pt-2 pt-8 cursor-pointer">
-              {/* <button
-                type="submit"
-                className="md:w-[160px] md:h-[50px] md:px-0 px-8 md:py-0 py-3  bg-[#1B6EA1] text-white p-2 rounded-lg hover:bg-[#1b6ea1c9]"
-              >
-                Submit
-              </button> */}
               <button
                 type="submit"
                 disabled={loading}
-                className={`md:w-[160px] md:h-[50px] md:px-0 px-8 md:py-0 py-3 bg-background-button text-white p-2 rounded-lg ${
+                className={`md:w-[160px] md:h-[50px] md:px-0 px-8  bg-background-button text-white p-2 rounded-lg ${
                   loading
                     ? "cursor-not-allowed opacity-70"
                     : "hover:bg-background-light"

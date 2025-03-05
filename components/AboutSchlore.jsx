@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import school123bg from "@/public/school123bg.svg";
-import SchoolByCitiesGoedu from "./SchoolByCitiesGoedu";
+import SchoolByCitiesSclore from "./SchoolByCitiesSclore";
 
 const AboutSchlore = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -14,7 +14,7 @@ const AboutSchlore = () => {
         className="relative w-full h-[400px] bg-no-repeat bg-cover bg-center overflow-hidden md:hidden"
         style={{ backgroundImage: `url(${school123bg.src})` }}
       >
-        <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center z-10">
+        <div className="absolute top-0 left-0 w-full h-full flex justify-center md:items-center z-10">
           <div className="text-white grid grid-cols-2 gap-24 p-10">
             <div className="space-y-10">
               <div className="space-y-1">
@@ -99,7 +99,7 @@ const AboutSchlore = () => {
       </div>
 
       <div className="md:hidden">
-        <SchoolByCitiesGoedu />
+        <SchoolByCitiesSclore />
       </div>
 
       <div className="hidden md:block">
