@@ -116,7 +116,7 @@ export default function ConsultationPopup({ setClose }) {
               placeholder="Your name"
               value={formData.name}
               onChange={handleChange}
-              className="p-2 border-b-2 border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded sm:w-[462px] sm:border-[#D9D9D9]"
+              className="p-2 border border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded  sm:border-[#D9D9D9]"
             />
             <input
               required
@@ -125,7 +125,7 @@ export default function ConsultationPopup({ setClose }) {
               placeholder="Your email"
               value={formData.email}
               onChange={handleChange}
-              className="p-2 border-b-2 border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded sm:w-[462px] sm:border-[#D9D9D9]"
+              className="p-2 border border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded  sm:border-[#D9D9D9]"
             />
             <div className="flex">
               <PhoneInput
@@ -135,10 +135,10 @@ export default function ConsultationPopup({ setClose }) {
                 inputStyle={{
                   width: "100%",
                   height: "40px",
-                  borderBottom: "2px solid #D9D9D9",
+                  borderBottom: "1px solid #D9D9D9",
                 }}
                 buttonStyle={{
-                  border: "2px solid #D9D9D9",
+                  border: "1px solid #D9D9D9",
                 }}
               />
             </div>
@@ -149,7 +149,7 @@ export default function ConsultationPopup({ setClose }) {
                 name="classes"
                 value={formData.classes}
                 onChange={handleChange}
-                className="p-2 border-b-2 border-[#D9D9D9] rounded md:w-[143px] w-full h-[39px] placeholder:text-[#898989] md:border md:rounded "
+                className="p-2 border border-[#D9D9D9] rounded  w-full h-[39px] placeholder:text-[#898989] md:border md:rounded "
               >
                 <option value="" className="text-[#898989]">
                   Class

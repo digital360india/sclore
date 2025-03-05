@@ -2,6 +2,7 @@
 import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
+import PhoneInput from "react-phone-input-2";
 
 const FormSchlore = () => {
   const [loading, setLoading] = useState(false);
@@ -23,7 +24,7 @@ const FormSchlore = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); 
+    setLoading(true);
     console.log(formData);
     try {
       const response = await axios.post(
@@ -43,14 +44,14 @@ const FormSchlore = () => {
     } catch (error) {
       alert("An error occurred. Please try again.");
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
   };
 
   return (
     <>
-      <div className="flex gap-20 justify-between items-center">
-        <div className="w-[795px] h-[539px] md:block hidden  ">
+      <div className="relative w-full h-[510px] md:h-[539px]">
+        <div className="absolute inset-0 z-0 md:block hidden w-[50%]">
           <Image
             src="/bookingformsclore.png"
             alt="School choice"
@@ -60,23 +61,28 @@ const FormSchlore = () => {
           />
         </div>
 
-        <div className="md:w-1/2 w-full p-6 bg-white">
-        <div className="md:hidden block font-bold text-center text-[20px]">
-        Confuse to choose the Best School ?
+        <div className="absolute md:right-10  top-1/2 transform -translate-y-1/2 z-10 md:w-fit w-full p-6 bg-white bg-opacity-90 rounded-lg shadow-lg">
+          <div className="md:hidden block font-bold text-center text-[20px]">
+            Confuse to choose the Best School ?
           </div>
-          <h3 className="md:text-xl  text-[12px] my-6 text-[#323232]">
+          <h3 className="md:text-xl  text-[16px] my-6 text-[#323232]">
             Fill this form and get in touch with our counsellor
           </h3>
           <form onSubmit={handleSubmit} className="space-y-7">
-            <input
-            required
-              type="text"
-              name="name"
-              placeholder="Your name"
-              value={formData.name}
-              onChange={handleChange}
-              className="p-2 border-b-2 border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded lg:w-[498px] sm:border-[#D9D9D9]"
-            />
+            <div>
+              <label htmlFor="">Name</label>
+              <div>
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="p-2 border border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded lg:w-[498px] sm:border-[#D9D9D9]"
+                />
+              </div>
+            </div>
             {/* <input
             type="email"
             name="email"
@@ -85,7 +91,7 @@ const FormSchlore = () => {
             onChange={handleChange}
             className="p-2 border-b-2 border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded sm:w-[462px] sm:border-[#D9D9D9]"
           /> */}
-            <div className="flex">
+            {/* <div className="flex">
               <select className="w-[80px] md:w-[100px] h-[39px] border-b-2 border-[#D9D9D9] rounded-l placeholder:text-[#898989] sm:border sm:rounded-l sm:p-2 sm:border-[#D9D9D9]">
                 <option value="🇮🇳">🇮🇳 +91</option>
                 <option value="🇺🇸">🇺🇸 +1</option>
@@ -147,8 +153,26 @@ const FormSchlore = () => {
                 onChange={handleChange}
                 className="w-full h-[39px] p-2 border-b-2 border-[#D9D9D9] placeholder:text-[#898989] sm:border sm:rounded-r sm:w-[398px] sm:border-[#D9D9D9]"
               />
+            </div> */}
+            <div>
+              <label htmlFor="">Mobile</label>
+              <div className="flex  w-full lg:w-[498px]">
+                <PhoneInput
+                  className="w-full border-[#D9D9D9] border rounded md:border md:rounded"
+                  country={"in"}
+                  value={formData.phone}
+                  onChange={handleChange}
+                  inputStyle={{
+                    width: "100%",
+                    height: "39px",
+                    border: "none",
+                  }}
+                  buttonStyle={{
+                    border: "1px solid #D9D9D9",
+                  }}
+                />
+              </div>
             </div>
-
 
             {/* <div className="flex md:gap-20 gap-8">
             <select
@@ -174,11 +198,11 @@ const FormSchlore = () => {
               
             </select>
           </div> */}
-            <div className="md:pt-2 pt-8 cursor-pointer">
+            <div className="md:pt-2 pt-8 text-center">
               <button
                 type="submit"
                 disabled={loading}
-                className={`md:w-[160px] md:h-[50px] md:px-0 px-8  bg-background-button text-white p-2 rounded-lg ${
+                className={`cursor-pointer md:w-[160px] md:h-[50px] md:px-0 px-8  bg-background-button text-white p-2 rounded-lg ${
                   loading
                     ? "cursor-not-allowed opacity-70"
                     : "hover:bg-background-light"
@@ -186,7 +210,6 @@ const FormSchlore = () => {
               >
                 {loading ? "Submitting..." : "Submit"}
               </button>
-              
             </div>
           </form>
         </div>
