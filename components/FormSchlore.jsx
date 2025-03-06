@@ -62,7 +62,7 @@ const FormSchlore = () => {
         </div>
 
         <div className="absolute md:right-10  top-1/2 transform -translate-y-1/2 z-10 md:w-fit w-full p-6 bg-white bg-opacity-90 rounded-lg shadow-lg">
-          <div className="md:hidden block font-bold text-center text-[20px]">
+          <div className="md:hidden block font-bold text-center text-xl">
             Confuse to choose the Best School ?
           </div>
           <h3 className="md:text-xl  text-[16px] my-6 text-[#323232]">
