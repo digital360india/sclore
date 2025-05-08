@@ -31,7 +31,20 @@ const FormSchlore = () => {
         "https://goedunodemailer.onrender.com/send-email",
         formData
       );
-      if (response.status === 200) {
+
+      // Submit to your LMS
+      const lmsResponse = await axios.post(
+        "https://digitalleadmanagement.vercel.app/api/add-lead",
+        {
+          name: formData.name,
+          phoneNumber: formData.phone,
+          url: window.location.href,
+          source: "Goedu - Confuse to choose the Best School",
+          date: new Date().toISOString(),
+        }
+      );
+
+      if (response.status === 200 && lmsResponse.status === 200) {
         alert("Form submitted successfully.");
         setFormData({
           name: "",
