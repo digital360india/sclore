@@ -21,7 +21,9 @@ const FormSchlore = () => {
       [name]: value,
     }));
   };
-
+  const handlePhoneChange = (value) => {
+    setFormData({ ...formData, phone: value });
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -39,7 +41,7 @@ const FormSchlore = () => {
           name: formData.name,
           phoneNumber: formData.phone,
           url: window.location.href,
-          source: "Goedu - Confuse to choose the Best School",
+          source: "Schlore - Confuse to choose the Best School",
           date: new Date().toISOString(),
         }
       );
@@ -174,7 +176,7 @@ const FormSchlore = () => {
                   className="w-full border-[#D9D9D9] border rounded md:border md:rounded"
                   country={"in"}
                   value={formData.phone}
-                  onChange={handleChange}
+                  onChange={handlePhoneChange}
                   inputStyle={{
                     width: "100%",
                     height: "39px",

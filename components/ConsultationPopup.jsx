@@ -25,6 +25,9 @@ export default function ConsultationPopup({ setClose }) {
       [name]: value,
     }));
   };
+  const handlePhoneChange = (value) => {
+    setFormData({ ...formData, phone: value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,11 +36,11 @@ export default function ConsultationPopup({ setClose }) {
     const airtablePayload = [
       {
         fields: {
-          firstName: formData.name,
+          Name: formData.name,
           email: formData.email,
-          phoneNumber: formData.phone,
-          class: formData.classes,
-          URL: window.location.href,
+          Mobile: formData.phone,
+          grade: formData.classes,
+          Url: window.location.href,
         },
       },
     ];
@@ -69,7 +72,7 @@ export default function ConsultationPopup({ setClose }) {
           name: formData.name,
           phoneNumber: formData.phone,
           url: window.location.href,
-          source: "Goedu - Get Consultation Popup",
+          source: "Schlore - Get Consultation Popup",
           email: formData.email,
           currentClass: formData.classes,
           date: new Date().toISOString(),
@@ -145,7 +148,7 @@ export default function ConsultationPopup({ setClose }) {
               <PhoneInput
                 country={"in"}
                 value={formData.phone}
-                onChange={handleChange}
+                onChange={handlePhoneChange}
                 inputStyle={{
                   width: "100%",
                   height: "40px",
