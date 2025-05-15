@@ -64,9 +64,9 @@ const AboutUsSchool123 = () => {
         <div className="bg-[#F8F8F8] px-7 space-y-10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 md:space-x-10">
             <div className="flex-1 order-2 md:order-none text-center md:text-left">
-              <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left hidden md:block">
+              <h1 className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left hidden md:block">
                 About Sclore
-              </p>
+              </h1>
               <p className="text-[12px] sm:text-[20px] text-justify mt-4 ">
                 Sclore is a platform that helps families find the best boarding
                 schools in India. We provide accurate and reliable information
@@ -75,9 +75,9 @@ const AboutUsSchool123 = () => {
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex md:flex-col items-center space-y-2 md:space-y-4 order-1 md:order-none gap-10 md:gap-0">
-              <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left md:hidden">
+              <h1 className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left md:hidden">
                 About Sclore
-              </p>
+              </h1>
               <img
                 src="/sclorelogo.png"
                 className="w-[100px] h-[130px] md:h-[160px] md:w-[150px]"
@@ -93,15 +93,15 @@ const AboutUsSchool123 = () => {
                 className="w-[100px] h-[110px] md:h-[160px] md:w-[150px]"
                 alt="Passion logo"
               />
-              <p className="text-[16px] sm:text-[40px] font-semibold md:hidden">
+              <h2 className="text-[16px] sm:text-[40px] font-semibold md:hidden">
                 Our Commitment to Education
-              </p>
+              </h2>
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex-1 text-center md:text-left order-2 md:order-none">
-              <p className="text-[16px] sm:text-[40px] font-semibold pb-4 hidden md:block">
+              <h2 className="text-[16px] sm:text-[40px] font-semibold pb-4 hidden md:block">
                 Our Commitment to Education
-              </p>
+              </h2>
               <p className="text-[12px] sm:text-[20px] text-justify">
                 We believe quality education changes lives. At Sclore, we work
                 hard to showcase the finest boarding schools across India,
@@ -112,9 +112,9 @@ const AboutUsSchool123 = () => {
 
           <div className="flex flex-col md:flex-row md:justify-between items-center  md:space-x-10">
             <div className="flex-1 order-2 md:order-none text-center md:text-left">
-              <p className="text-[16px] sm:text-[40px] font-semibold text-center pb-4 md:text-left hidden md:block">
+              <h2 className="text-[16px] sm:text-[40px] font-semibold text-center pb-4 md:text-left hidden md:block">
                 Why Trust Us
-              </p>
+              </h2>
               <p className="text-[12px] sm:text-[20px] text-justify">
                 Honesty and transparency are at the heart of what we do. Sclore
                 ensures parents and students receive up-to-date and trustworthy
@@ -124,9 +124,9 @@ const AboutUsSchool123 = () => {
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex md:flex-col items-center order-1 md:order-none gap-10 md:gap-0">
-              <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left md:hidden">
+              <h2 className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left md:hidden">
                 Why Trust Us
-              </p>
+              </h2>
               <img
                 src="./ourmission.svg"
                 className="w-[100px] h-[100px] md:h-[160px] md:w-[150px]"
@@ -142,15 +142,15 @@ const AboutUsSchool123 = () => {
                 className="w-[100px] h-[100px] md:h-[160px] md:w-[150px]"
                 alt="Consultation logo"
               />
-              <p className="text-[16px] sm:text-[40px] font-semibold  md:hidden">
+              <h2 className="text-[16px] sm:text-[40px] font-semibold  md:hidden">
                 Our Purpose
-              </p>
+              </h2>
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex-1 text-center md:text-left order-2 md:order-none">
-              <p className="text-[16px] sm:text-[40px] font-semibold pb-4 hidden md:block">
+              <h2 className="text-[16px] sm:text-[40px] font-semibold pb-4 hidden md:block">
                 Our Purpose
-              </p>
+              </h2>
               <p className="text-[12px] sm:text-[20px] text-justify">
                 Our goal is to make finding the ideal boarding school simple and
                 accessible for every family. We aim to be India&apos;s most
@@ -162,9 +162,9 @@ const AboutUsSchool123 = () => {
 
           <div className="flex flex-col md:flex-row justify-between items-center md:space-x-10">
             <div className="flex-1 order-2 md:order-none text-center md:text-left">
-              <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left pb-4 hidden md:block">
+              <h2 className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left pb-4 hidden md:block">
                 Bringing Families and Schools Together
-              </p>
+              </h2>
               <p className="text-[12px] sm:text-[20px] text-justify">
                 Sclore connects parents and students with top-tier boarding
                 schools in India. We provide families with a carefully selected
@@ -174,9 +174,9 @@ const AboutUsSchool123 = () => {
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex md:flex-col items-center order-1 md:order-none gap-10 md:gap-0">
-              <p className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left md:hidden">
+              <h2 className="text-[16px] sm:text-[40px] font-semibold text-center md:text-left md:hidden">
                 Bringing Families and Schools Together
-              </p>
+              </h2>
               <img
                 src="/joinus.svg"
                 className="w-[100px] h-[130px] md:h-[160px] md:w-[150px]"
@@ -192,15 +192,15 @@ const AboutUsSchool123 = () => {
                 className="w-[100px] h-[100px] md:h-[160px] md:w-[150px]"
                 alt="Consultation logo"
               />
-              <p className="text-[16px] sm:text-[40px] font-semibold  md:hidden">
+              <h2 className="text-[16px] sm:text-[40px] font-semibold  md:hidden">
                 How We Support Families
-              </p>
+              </h2>
             </div>
             <div className="w-[2px] h-52 bg-[#323232] hidden md:block"></div>
             <div className="flex-1 text-center md:text-left order-2 md:order-none">
-              <p className="text-[16px] sm:text-[40px] font-semibold pb-4 hidden md:block">
+              <h2 className="text-[16px] sm:text-[40px] font-semibold pb-4 hidden md:block">
                 How We Support Families
-              </p>
+              </h2>
               <p className="text-[12px] sm:text-[20px] text-justify">
                 We go beyond just providing information. Sclore offers expert
                 consultation to help families choose the right school. Our team

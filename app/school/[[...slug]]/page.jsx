@@ -392,7 +392,7 @@ export async function generateMetadata({ params }) {
   const sheetName = categoryData.sheetName;
   
   return {
-    title: `${categoryData?.name} | Admissions 2024-25`,
+    title: `${categoryData?.name} | Admissions 2025-26`,
     description: categoryData?.Meta_description,
     keywords: categoryData?.Meta_keywords,
     alternates: {
