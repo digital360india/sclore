@@ -24,17 +24,17 @@ export async function generateMetadata({ params }) {
     keywords: categoryData?.keywords,
     authors: [{ name: categoryData?.author }],
     alternates: {
-      canonical: `https://www.edu123.in/category/${params.slug}`,
+      canonical: `https://www.sclore.com/category/${params.slug}`,
     },
     openGraph: {
       title: categoryData?.title,
       description: categoryData?.meta_description,
-      url: `https://www.edu123.in/${params.slug}`,
+      url: `https://www.sclore.com/${params.slug}`,
       locale: "en_US",
       type: "website",
       images: [{ url: categoryData?.featuredImg }],
-      siteName: "Edu123",
-      siteName: "Edu123 School Search Portal",
+      siteName: "sclore",
+      siteName: "Sclore School Search Portal",
     },
     robots: {
       googleBot: {
@@ -48,8 +48,8 @@ export async function generateMetadata({ params }) {
       description: categoryData?.meta_description,
       card: categoryData?.featuredImg,
       image: categoryData?.featuredImg,
-      site: "@edu123",
-      creator: "@edu123",
+      site: "@sclore",
+      creator: "@sclore",
     },
   };
 }
@@ -80,24 +80,6 @@ export default async function ListingPage({ params }) {
           }}
         />
       </Head>
-      {/* <div className="bg-white overflow-x-hidden">
-        <div className="hidden sm:block">
-          <Hero
-            image="https://res.cloudinary.com/eduminatti-com/image/upload/v1726733029/Edu123/Eduimages/banner_desktop_2.jpg"
-            height="67vh"
-          />
-        </div>
-        <div className="sm:hidden">
-          <Hero
-            need="no"
-            image="https://res.cloudinary.com/eduminatti-com/image/upload/v1726733028/Edu123/Eduimages/mobile_banner.png"
-            height="65vh"
-          />
-        </div>
-        <CategoryPage categoryData={categoryData} />
-        <FAQ categoryData={categoryData} />
-      </div> */}
-
 
       <div className="overflow-hidden md:overflow-visible">
         <CategoryHeroGoEdu />
