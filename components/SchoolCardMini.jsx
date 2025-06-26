@@ -15,7 +15,7 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 import { StarRating, StarRatingper } from "./StarRating";
 import { PiStudentFill } from "react-icons/pi";
 
-import CategoryGalleryGoEdu from "./CategoryGalleryGoEdu";
+// import CategoryGalleryGoEdu from "./CategoryGalleryGoEdu";
 import ConsultationPopup from "./ConsultationPopup";
 import CategoryGallerySclore from "./CategoryGallerySclore";
 
@@ -65,7 +65,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
           <div className="flex  gap-5">
             <div className="">
               <div className=" ">
-                <CategoryGalleryGoEdu
+                <CategoryGallerySclore
                   data={data}
                   index={index}
                   citySlug={citySlug}
@@ -240,7 +240,7 @@ const SchoolCardMini = ({ data, index, citySlug }) => {
             </div>
 
             
-            <div className="flex  space-x-12 p-3 font-semibold  text-[10px] bg-background-button rounded-l-2xl text-white   w-[315px]">
+            <div className="flex  space-x-12 p-3 font-semibold  text-[10px] bg-background-button rounded-l-2xl text-white w-[109%]    md:w-[315px]">
               <div className="space-y-3">
                 <div className="flex flex-col ">
                   <p className="font-bold text-[11px]">Curriculum</p>

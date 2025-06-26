@@ -25,6 +25,9 @@ export default function ConsultationPopup({ setClose }) {
       [name]: value,
     }));
   };
+  const handlePhoneChange = (value) => {
+    setFormData({ ...formData, phone: value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -62,7 +65,21 @@ export default function ConsultationPopup({ setClose }) {
         formData
       );
 
-      if (emailResponse.status === 200) {
+      // Submit to your LMS
+      const lmsResponse = await axios.post(
+        "https://digitalleadmanagement.vercel.app/api/add-lead",
+        {
+          name: formData.name,
+          phoneNumber: formData.phone,
+          url: window.location.href,
+          source: "Schlore - Get Consultation Popup",
+          email: formData.email,
+          currentClass: formData.classes,
+          date: new Date().toISOString(),
+        }
+      );
+
+      if (emailResponse.status === 200 && lmsResponse.status === 200) {
         toast.success("Form Submitted Successfully!");
         setFormData({
           name: "",
@@ -87,7 +104,7 @@ export default function ConsultationPopup({ setClose }) {
       <div className="relative md:flex   gap-5  md:items-center bg-white rounded-lg shadow-lg w-full max-w-[90vw] md:max-w-[80vw] ">
         <button
           onClick={setClose}
-          className="absolute bg-background-button px-1 py-1 md:px-2 z-50 rounded-full  md:py-2 top-2 right-2 text-2xl font-bold text-white hover:text-gray-900"
+          className="absolute bg-background-button p-1 md:px-2 z-50 rounded-full  md:py-2 top-3 right-2 text-xl font-bold text-white "
         >
           <div className="flex justify-center items-center">
             <RxCross1 />
@@ -104,11 +121,11 @@ export default function ConsultationPopup({ setClose }) {
           />
         </div>
 
-        <div className="w-full z-50 md:w-[470px] h-full rounded-l-2xl p-8 md:absolute md:top-0 md:right-14 bg-white">
-          <h3 className=" md:text-xl mb-6 text-[#323232]">
+        <div className="w-full z-50 md:w-[470px] h-full rounded-lg md:rounded-l-2xl md:p-8  md:absolute md:top-0 md:right-14 bg-white">
+          <h3 className=" md:text-xl font-bold text-[#323232] pt-4 px-5 w-[85%]">
             Fill this form and get in touch with our counsellor
           </h3>
-          <form onSubmit={handleSubmit} className="space-y-7 md:space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-7 md:space-y-6 p-5">
             <input
               required
               type="text"
@@ -116,7 +133,7 @@ export default function ConsultationPopup({ setClose }) {
               placeholder="Your name"
               value={formData.name}
               onChange={handleChange}
-              className="p-2 border-b-2 border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded sm:w-[462px] sm:border-[#D9D9D9]"
+              className="p-2 border border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded  sm:border-[#D9D9D9]"
             />
             <input
               required
@@ -125,20 +142,20 @@ export default function ConsultationPopup({ setClose }) {
               placeholder="Your email"
               value={formData.email}
               onChange={handleChange}
-              className="p-2 border-b-2 border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded sm:w-[462px] sm:border-[#D9D9D9]"
+              className="p-2 border border-[#D9D9D9] w-full h-[39px] placeholder:text-[#898989] sm:border sm:rounded  sm:border-[#D9D9D9]"
             />
             <div className="flex">
               <PhoneInput
                 country={"in"}
                 value={formData.phone}
-                onChange={handleChange}
+                onChange={handlePhoneChange}
                 inputStyle={{
                   width: "100%",
                   height: "40px",
-                  borderBottom: "2px solid #D9D9D9",
+                  borderBottom: "1px solid #D9D9D9",
                 }}
                 buttonStyle={{
-                  border: "2px solid #D9D9D9",
+                  border: "1px solid #D9D9D9",
                 }}
               />
             </div>
@@ -149,7 +166,7 @@ export default function ConsultationPopup({ setClose }) {
                 name="classes"
                 value={formData.classes}
                 onChange={handleChange}
-                className="p-2 border-b-2 border-[#D9D9D9] rounded md:w-[143px] w-[120px] h-[39px] placeholder:text-[#898989] md:border md:rounded "
+                className="p-2 border border-[#D9D9D9] rounded  w-full h-[39px] placeholder:text-[#898989] md:border md:rounded "
               >
                 <option value="" className="text-[#898989]">
                   Class
@@ -171,17 +188,15 @@ export default function ConsultationPopup({ setClose }) {
               </select>
             </div>
 
-             {/* Hidden input for source */}
-             <input
+            {/* Hidden input for source */}
+            <input
               type="hidden"
               name="source"
               value={formData.source}
               readOnly
             />
-            
-            <div className="md:pt-20 pt-8 cursor-pointer">
 
-
+            <div className="md:pt-20  cursor-pointer">
               <button
                 type="submit"
                 disabled={loading}

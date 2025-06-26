@@ -289,9 +289,9 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
           <div className=" ">
             <div className="md:text-background-button  text-center flex flex-col md:justify-center md:items-center ">
               <div className="flex flex-col gap-6 font-bold p-2">
-                <p className="text-4xl  text-left  md:text-center">
+                <h1 className="text-4xl  text-left  md:text-center">
                   {school?.name}
-                </p>
+                </h1>
                 <div className="text-left flex justify-center ">
                   <button
                     className="w-[180px]  shadow-md h-[40px] bg-background-button text-white rounded-lg"
@@ -327,7 +327,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
           <div className=" ">
             <div className="text-background-button text-center flex flex-col justify-center items-center ">
               <div className="flex flex-col gap-6 font-bold p-2">
-                <p className="text-3xl text-center">{school?.name}</p>
+                <h1 className="text-3xl text-center">{school?.name}</h1>
                 <div className="text-left flex justify-center ">
                   <button
                     className="w-[180px]  shadow-md h-[40px] bg-background-button text-white rounded-lg"
@@ -397,9 +397,9 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
         <div>
           <div className="flex justify-center md:space-x-20 md:sticky md:top-0 bg-white">
             <section className="space-y-5 md:w-[570px] md:h-[750px] px-6 md:px-0">
-              <p className=" text-[24px] sm:text-[32px] md:w-[239px]  md:h-[54px] md:text-left ">
+              <h2 className=" text-[24px] sm:text-[32px] md:w-[239px]  md:h-[54px] md:text-left ">
                 About School
-              </p>
+              </h2>
               <hr className="w-auto md:w-[550px] h-0.5 bg-black" />
 
               <div dangerouslySetInnerHTML={{__html:school?.Long_Description}} className="article-container text-[16px] h-[323px] md:w-[570px] text-[#898989] text-justify p-2 overflow-y-scroll">
@@ -515,9 +515,9 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
 
           <div className="flex md:justify-center px-6 md:px-0  md:space-x-20 md:sticky md:top-0 mt-6 md:mt-0 bg-white md:h-[100vh] ">
             <section className=" md:w-[570px] md:h-[750px]  md:px-0">
-              <p className="ml-2 md:ml-0 text-[24px] sm:text-[24px] md:text-[32px] md:w-[293px] h-auto md:h-[54px] md:mb-4 mb-4 mt-6 text-[#323232]">
+              <h2 className="ml-2 md:ml-0 text-[24px] sm:text-[24px] md:text-[32px] md:w-[293px] h-auto md:h-[54px] md:mb-4 mb-4 mt-6 text-[#323232]">
                 School Statistics
-              </p>
+              </h2>
 
               <hr className=" w-[300px] ml-2 md:ml-0 md:w-[550px] h-0.5 bg-black mb-6" />
               <div className="flex-col space-y-5 md:flex-wrap md:gap-y-5  md:gap-x-0   sm:gap-y-0   text-[14px] md:text-[18px] md:space-y-8">
@@ -617,7 +617,7 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
 
                       <div className="flex items-center justify-center absolute inset-y-0 left-14">
                         <div className="bg-gradient-to-b from-[#F1F4F9] to-[#C6D1E3] md:pl-20 md:pr-12 pl-[72px] pr-14 h-[65px] flex items-center rounded-r-full">
-                          <p className="">Extracurricular</p>
+                          <h2 className="">Extracurricular</h2>
                         </div>
                         <p
                           style={{ color: textColor }}
@@ -651,9 +651,9 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
 
           <div className="flex md:justify-center  md:space-x-20 md:sticky md:top-0 bg-white  md:h-[97vh]">
             <section className="md:w-[570px] mb-12  md:h-[750px] md:mb-[20px] md:px-0 ">
-              <p className="text-[24px] ml-9 md:ml-0 sm:text-[32px] md:w-[323px] h-[54px] mt-12 md:mt-6 md:mb-6 ">
+              <h2 className="text-[24px] ml-9 md:ml-0 sm:text-[32px] md:w-[323px] h-[54px] mt-12 md:mt-6 md:mb-6 ">
                 Student Facilities
-              </p>
+              </h2>
               <hr className=" w-[300px] ml-9 md:ml-0 md:w-[550px] h-0.5 bg-black mb-6" />
               <div className="px-7 grid md:gap-4 grid-cols-3 ">
                 {facility.map(
@@ -700,9 +700,9 @@ const SchoolDetails = ({ school, reviews, city, id }) => {
           <div className="md:flex md:justify-between md:w-full  md:bg-background-button bg-[#F3F3F3] rounded-b-[100px] md:h-[487px] h-[503px] p-12 w-full">
             <div className=" ">
               <div className="flex justify-between">
-                <p className="text-[24px] sm:text-[28px] md:text-[#FFFFFF] text-[#323232] md:pb-2 pb-8">
+                <h2 className="text-[24px] sm:text-[28px] md:text-[#FFFFFF] text-[#323232] md:pb-2 pb-8">
                   Reviews
-                </p>
+                </h2>
                 <div className="md:hidden">
                   <button
                     className="md:w-[223px] md:h-[40px] w-[140px] h-[36px] md:bg-background-button md:text-white text-[#323232] rounded-2xl border md:border-white border-[#323232] ml-auto"

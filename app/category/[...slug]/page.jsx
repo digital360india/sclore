@@ -4,6 +4,7 @@ import FAQ from "@/components/FAQ";
 import CategoryPage from "@/components/CategoryPage";
 import CategoryHeroGoEdu from "@/components/CategoryHeroGoEdu";
 import Head from "next/head";
+import Script from "next/script";
 
 async function getCategoryData(slug) {
   const categoryData = await base("category 2")
@@ -29,11 +30,11 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: categoryData?.title,
       description: categoryData?.meta_description,
-      url: `https://www.sclore.com/${params.slug}`,
+      url: `https://www.sclore.com/category/${params.slug}`,
       locale: "en_US",
       type: "website",
       images: [{ url: categoryData?.featuredImg }],
-      siteName: "sclore",
+       siteName: "sclore",
       siteName: "Sclore School Search Portal",
     },
     robots: {
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }) {
       card: "summary",
       title: categoryData?.title,
       description: categoryData?.meta_description,
-      card: categoryData?.featuredImg,
+
       image: categoryData?.featuredImg,
       site: "@sclore",
       creator: "@sclore",
@@ -80,6 +81,24 @@ export default async function ListingPage({ params }) {
           }}
         />
       </Head>
+      {/* <div className="bg-white overflow-x-hidden">
+        <div className="hidden sm:block">
+          <Hero
+            image="https://res.cloudinary.com/eduminatti-com/image/upload/v1726733029/Edu123/Eduimages/banner_desktop_2.jpg"
+            height="67vh"
+          />
+        </div>
+        <div className="sm:hidden">
+          <Hero
+            need="no"
+            image="https://res.cloudinary.com/eduminatti-com/image/upload/v1726733028/Edu123/Eduimages/mobile_banner.png"
+            height="65vh"
+          />
+        </div>
+        <CategoryPage categoryData={categoryData} />
+        <FAQ categoryData={categoryData} />
+      </div> */}
+
 
       <div className="overflow-hidden md:overflow-visible">
         <CategoryHeroGoEdu />
